@@ -1,13 +1,16 @@
-void setup() {
-  Serial.begin(9600);
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(10, 11); // RX, TX
 
+void setup() {
+  Serial.begin(115200);
+  mySerial.begin(9600);
 }
-char tmpChar;
+int c ;
 void loop() 
 {
    while (Serial.available()) 
-    { 
-      tmpChar = Serial.read();
-      Serial.print(tmpChar);
+     {
+      c= Serial.read();
+      mySerial.write(c);
      }
 }

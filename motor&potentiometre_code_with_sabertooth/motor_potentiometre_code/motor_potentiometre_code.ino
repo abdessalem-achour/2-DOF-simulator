@@ -60,20 +60,34 @@ void setup()
 void loop()
 { // teta1 appartient à [30 , 750]
   // teta2 appartient à [200 , 1000]
-  
+  moove(500,500);
    if(Serial.available())
     { 
     c=Serial.read();
     Serial.println(c);
     if(c=='a') 
-    {moove(140,140);
-    delay(1000);
+    {
+    moove(650,500);  
+    moove(300,500);
+    moove(650,500);  
+    moove(300,500);
+    moove(500,650);  
+    moove(500,300);
+    moove(500,650);  
+    moove(500,300);
+    moove(500,500);
     moove(850,850);
-    delay(1000);
-    moove(300,140);
-    delay(1000);
+    moove(500,850);
+    moove(150,500);
+    moove(150,150);
+    moove(150,750);
+    moove(500,500);
+    moove(140,140);
     moove(850,850);
-    delay(1000);
+    moove(140,850);
+    moove(850,140);
+    moove(500,500);
+   
     }
     else stopp();
     }
