@@ -13,12 +13,16 @@ void loop() {
   if (mySerial.available()) 
      {
       c=mySerial.read();
-      Serial.print("Axe1a --->  ");
-      Serial.print(c);
-      Serial.print("        |        ");
+      Serial.print("Axe1a -->  ");
+      Serial.print(c-127);
+      Serial.print(" | ");
       c=mySerial.read();
-      Serial.print("Axe2a --->   ");
-      Serial.println(c);
+      Serial.print("Axe2a -->   ");
+      Serial.println(c-127);
+      Serial.print(" | ");
+      c=mySerial.read();
+      Serial.print("Roll -->   ");
+      Serial.println(c-127);
      }
 
 }
